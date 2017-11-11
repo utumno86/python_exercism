@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import os
+import site
+site.addsitedir(os.path.realpath(__file__ + "/../.."))
+
+import meetup
+
+print 'This is a program that, assuming a meetup that meets montly, input the year and the month (in numbers), the day of the week (as a string of the full day with capitals) and which weekday of the month (with options 1st, 2nd, 3rd, 4th, 5th, last, teenth).'
+year = int(raw_input("Enter Year(in numbers): "))
+month = int(raw_input("Enter Month(in numbers (with no first zeros)): "))
+weekday = raw_input("Enter Weekday (in string, capitalized i.e. Monday): ")
+position = raw_input("Enter which weekday of the month (options: 1st, 2nd, 3rd, 4th, 5th, last, teenth): ")
+print meetup.meetup_day(year, month, weekday, position).strftime('%A, %B %e, %Y')
