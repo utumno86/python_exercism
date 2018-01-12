@@ -28,7 +28,10 @@ def calculate_day(position, start_date, number_of_days):
     elif position == 'last':
         while start_date.day < number_of_days - 6:
             start_date += timedelta(days=7)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
     else:
         start_date += timedelta(days=(7 * (positon_key[position] - 1)))
     return start_date
@@ -46,4 +49,8 @@ def calculate_start_date(meta_start_date, weekday):
         }
     while meta_start_date.weekday() != weekday_key[weekday]:
         meta_start_date += timedelta(days=1)
+<<<<<<< HEAD
     return meta_start_date.day
+=======
+    return meta_start_date.day
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd

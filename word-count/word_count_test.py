@@ -7,18 +7,29 @@ class WordCountTests(unittest.TestCase):
 
     def test_count_one_word(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('word'),
             {'word': 1}
+=======
+            {'word': 1},
+            word_count('word')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_count_one_of_each(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('one of each'),
             {'one': 1, 'of': 1, 'each': 1}
+=======
+            {'one': 1, 'of': 1, 'each': 1},
+            word_count('one of each')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_count_multiple_occurences(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('one fish two fish red fish blue fish'),
             {'one': 1, 'fish': 4, 'two': 1, 'red': 1, 'blue': 1}
         )
@@ -33,22 +44,37 @@ class WordCountTests(unittest.TestCase):
         self.assertEqual(
             word_count('one,\ntwo,\nthree'),
             {'one': 1, 'two': 1, 'three': 1}
+=======
+            {'one': 1, 'fish': 4, 'two': 1, 'red': 1, 'blue': 1},
+            word_count('one fish two fish red fish blue fish')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_ignores_punctuation(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('car : carpet as java : javascript!!&@$%^&'),
             {'car': 1, 'carpet': 1, 'as': 1, 'java': 1, 'javascript': 1}
+=======
+            {'car': 1, 'carpet': 1, 'as': 1, 'java': 1, 'javascript': 1},
+            word_count('car : carpet as java : javascript!!&@$%^&')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_include_numbers(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('testing 1 2 testing'),
             {'testing': 2, '1': 1, '2': 1}
+=======
+            {'testing': 2, '1': 1, '2': 1},
+            word_count('testing 1 2 testing')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_mixed_case(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('go Go GO Stop stop'),
             {'go': 3, 'stop': 2}
         )
@@ -72,28 +98,57 @@ class WordCountTests(unittest.TestCase):
         self.assertEqual(
             word_count('wait for       it'),
             {'wait': 1, 'for': 1, 'it': 1}
+=======
+            [2, 3],
+            sorted(list(word_count('go Go GO Stop stop').values()))
+        )
+
+    def test_multiple_spaces(self):
+        self.assertEqual(
+            {'wait': 1, 'for': 1, 'it': 1},
+            word_count('wait for       it')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_newlines(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('rah rah ah ah ah\nroma roma ma\n'
                        'ga ga oh la la\nwant your bad romance'),
             {'rah': 2, 'ah': 3, 'roma': 2, 'ma': 1, 'ga': 2, 'oh': 1, 'la': 2,
              'want': 1, 'your': 1, 'bad': 1, 'romance': 1}
+=======
+            {'rah': 2, 'ah': 3, 'roma': 2, 'ma': 1, 'ga': 2, 'oh': 1, 'la': 2,
+             'want': 1, 'your': 1, 'bad': 1, 'romance': 1},
+            word_count('rah rah ah ah ah\nroma roma ma\n'
+                       'ga ga oh la la\nwant your bad romance')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_tabs(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('rah rah ah ah ah\troma roma ma\tga ga oh la la\t'
                        'want your bad romance'),
             {'rah': 2, 'ah': 3, 'roma': 2, 'ma': 1, 'ga': 2, 'oh': 1, 'la': 2,
              'want': 1, 'your': 1, 'bad': 1, 'romance': 1}
+=======
+            {'rah': 2, 'ah': 3, 'roma': 2, 'ma': 1, 'ga': 2, 'oh': 1, 'la': 2,
+             'want': 1, 'your': 1, 'bad': 1, 'romance': 1},
+            word_count('rah rah ah ah ah\troma roma ma\tga ga oh la la\t'
+                       'want your bad romance')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
     def test_non_alphanumeric(self):
         self.assertEqual(
+<<<<<<< HEAD
             word_count('hey,my_spacebar_is_broken.'),
             {'hey': 1, 'my': 1, 'spacebar': 1, 'is': 1, 'broken': 1}
+=======
+            {'hey': 1, 'my': 1, 'spacebar': 1, 'is': 1, 'broken': 1},
+            word_count('hey,my_spacebar_is_broken.')
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
         )
 
 

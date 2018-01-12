@@ -5,4 +5,8 @@ def distance(string1, string2):
     for i in range(len(string1)):
         if string1[i] != string2[i]:
             count += 1
+<<<<<<< HEAD
     return count
+=======
+    return count
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd

@@ -19,4 +19,8 @@ def word_count(text):
         word = word.lower()
         if word != '':
             count[word] = count.get(word, 0) + 1
+<<<<<<< HEAD
     return count
+=======
+    return count
+>>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd

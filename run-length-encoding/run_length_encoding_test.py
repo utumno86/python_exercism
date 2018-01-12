@@ -14,7 +14,6 @@ class WordCountTests(unittest.TestCase):
 
     def test_encode_string_with_no_single_characters(self):
         self.assertMultiLineEqual(encode('AABBBCCCC'), '2A3B4C')
-
     def test_encode_single_characters_mixed_with_repeated_characters(self):
         self.assertMultiLineEqual(
             encode('WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB'),
