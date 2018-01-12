@@ -1,6 +1,4 @@
+""" Returns Hello World """
 def hello():
-<<<<<<< HEAD
-        return "Hello, World!"
-=======
-        return "Hello, World!"
->>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
+    """ Both the module and function only return Hello world """
+    return "Hello, World!"
