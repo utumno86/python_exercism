@@ -1,2 +1,12 @@
 def convert(number):
-    pass
+    raindrops = ''
+    if number % 3 == 0:
+      raindrops += 'Pling'
+    if number % 5 == 0:
+      raindrops += 'Plang'
+    if number % 7 == 0:
+      raindrops += 'Plong'
+    if (number % 3 != 0 and number % 5 != 0 and number % 7 != 0):
+      raindrops = str(number)
+    return raindrops
+
