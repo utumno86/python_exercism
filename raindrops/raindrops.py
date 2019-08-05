@@ -1,12 +1,13 @@
 def convert(number):
-    raindrops = ''
-    if number % 3 == 0:
-      raindrops += 'Pling'
-    if number % 5 == 0:
-      raindrops += 'Plang'
-    if number % 7 == 0:
-      raindrops += 'Plong'
-    if (number % 3 != 0 and number % 5 != 0 and number % 7 != 0):
-      raindrops = str(number)
-    return raindrops
+
+    soundPairs = {
+      3: "Pling",
+      5: "Plang",
+      7: "Plong"
+    }
+    raindrops = [soundPairs[factor] for factor in soundPairs if number%factor == 0]
+    if len(raindrops) == 0:
+      return str(number)
+    else:
+      return "".join(raindrops)
 
