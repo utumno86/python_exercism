@@ -1,10 +1,11 @@
 # Hello World
 
-<<<<<<< HEAD
+Welcome to Hello World on Exercism's Python Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 The classical introductory exercise. Just say "Hello, World!".
-=======
-The classical introductory exercise. Just say "Hello, World!"
->>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
 
 ["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
 the traditional first program for beginning programming in a new language
@@ -18,30 +19,27 @@ The objectives are simple:
 
 If everything goes well, you will be ready to fetch your first real exercise.
 
-<<<<<<< HEAD
-## Submitting Exercises
-=======
-### Submitting Exercises
->>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
-
-Note that, when trying to submit an exercise, make sure the solution is in the `exercism/python/<exerciseName>` directory.
-
-For example, if you're submitting `bob.py` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/python/bob/bob.py`.
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
-For more detailed information about running tests, code style and linting,
-please see the [help page](http://exercism.io/languages/python).
-
 ## Source
 
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+### Created by
 
-<<<<<<< HEAD
-## Submitting Incomplete Solutions
-=======
-## Submitting Incomplete Problems
->>>>>>> 371894dab186cec701ce325dcc4d002c02d93cbd
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @michaelem
+
+### Contributed to by
+
+- @behrtam
+- @cmccandless
+- @Dog
+- @hebertjulio
+- @ikhadykin
+- @kytrinyx
+- @N-Parsons
+- @NobbZ
+- @pheanex
+- @skeskali
+- @Sukhj1nder
+- @tqa236
+
+### Based on
+
+This is an exercise to introduce users to using Exercism - http://en.wikipedia.org/wiki/%22Hello,_world!%22_program
