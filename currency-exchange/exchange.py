@@ -1,3 +1,6 @@
+"""Currency Exchange Calculator"""
+
+
 def estimate_value(budget, exchange_rate):
     """
 
