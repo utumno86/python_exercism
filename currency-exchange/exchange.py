@@ -50,7 +50,7 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :param denomination: int - the value of a single bill.
     :return: int - maximum value you can get
     """
-    actual_exchange_rate = exchange_rate + exchange_rate * spread / 100
+    actual_exchange_rate = calculate_actual_rate(exchange_rate, spread)
     value = estimate_value(budget, actual_exchange_rate)
     leftover = get_leftover_value(value, denomination)
     return int(value - leftover)
@@ -66,7 +66,9 @@ def unexchangeable_value(budget, exchange_rate, spread, denomination):
     :return: int - unexchangeable value
     """
 
-    pass
+    actual_exchange_rate = calculate_actual_rate(exchange_rate, spread)
+    value = estimate_value(budget, actual_exchange_rate)
+    return int(get_leftover_value(value, denomination))
 
 
 def get_leftover_value(value, denomination):
@@ -79,3 +81,14 @@ def get_leftover_value(value, denomination):
     """
 
     return value % denomination
+
+
+def calculate_actual_rate(exchange_rate, spread):
+    """
+    Determine the exchange rate given an exchange fee
+
+    :param exchange_rate: float - the unit value of the foreign currency.
+    :param value: float - the amount of your money you are planning to exchange.
+    :return: float - leftover value that can't be converted
+    """
+    return exchange_rate + exchange_rate * spread / 100
