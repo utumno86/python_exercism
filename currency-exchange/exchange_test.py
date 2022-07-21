@@ -20,8 +20,7 @@ class TestNumbers(unittest.TestCase):
 
         for variant, input, output in zip(number_of_variants, input_data, output_data):
             with self.subTest(f"variation #{variant}", input=input, output=output):
-                self.assertEqual(
-                    int(estimate_value(input[0], input[1])), output)
+                self.assertEqual(int(estimate_value(input[0], input[1])), output)
 
     @pytest.mark.task(taskno=2)
     def test_get_change(self):
@@ -51,8 +50,7 @@ class TestNumbers(unittest.TestCase):
 
         for variant, input, output in zip(number_of_variants, input_data, output_data):
             with self.subTest(f"variation #{variant}", input=input, output=output):
-                self.assertEqual(get_number_of_bills(
-                    input[0], input[1]), output)
+                self.assertEqual(get_number_of_bills(input[0], input[1]), output)
 
     @pytest.mark.task(taskno=5)
     def test_exchangeable_value(self):
@@ -68,8 +66,7 @@ class TestNumbers(unittest.TestCase):
 
         for variant, input, output in zip(number_of_variants, input_data, output_data):
             with self.subTest(f"variation #{variant}", input=input, output=output):
-                self.assertEqual(exchangeable_value(
-                    input[0], input[1], input[2], input[3]), output)
+                self.assertEqual(exchangeable_value(input[0], input[1], input[2], input[3]), output)
 
     @pytest.mark.task(taskno=6)
     def test_unexchangeable_value(self):
@@ -84,5 +81,4 @@ class TestNumbers(unittest.TestCase):
 
         for variant, input, output in zip(number_of_variants, input_data, output_data):
             with self.subTest(f"variation #{variant}", input=input, output=output):
-                self.assertEqual(unexchangeable_value(
-                    input[0], input[1], input[2], input[3]), output)
+                self.assertEqual(unexchangeable_value(input[0], input[1], input[2], input[3]), output)
