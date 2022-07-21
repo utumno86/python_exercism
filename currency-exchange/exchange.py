@@ -1,7 +1,7 @@
 """Currency Exchange Calculator"""
 
 
-def estimate_value(budget, exchange_rate):
+def exchange_money(budget, exchange_rate):
     """
 
     :param budget: float - amount of money you are planning to exchange.
@@ -22,7 +22,7 @@ def get_change(budget, exchanging_value):
     return budget - exchanging_value
 
 
-def get_value(denomination, number_of_bills):
+def get_value_of_bills(denomination, number_of_bills):
     """
 
     :param denomination: int - the value of a bill.
@@ -54,12 +54,12 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :return: int - maximum value you can get
     """
     actual_exchange_rate = calculate_actual_rate(exchange_rate, spread)
-    value = estimate_value(budget, actual_exchange_rate)
+    value = exchange_money(budget, actual_exchange_rate)
     leftover = get_leftover_value(value, denomination)
     return int(value - leftover)
 
 
-def unexchangeable_value(budget, exchange_rate, spread, denomination):
+def non_exchangeable_value(budget, exchange_rate, spread, denomination):
     """
 
     :param budget: float - the amount of your money you are planning to exchange.
@@ -70,7 +70,7 @@ def unexchangeable_value(budget, exchange_rate, spread, denomination):
     """
 
     actual_exchange_rate = calculate_actual_rate(exchange_rate, spread)
-    value = estimate_value(budget, actual_exchange_rate)
+    value = exchange_money(budget, actual_exchange_rate)
     return int(get_leftover_value(value, denomination))
 
 
